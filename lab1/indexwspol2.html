@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab1wspol2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        const myWorker = new Worker("task1.js");
+        const myWorker2 = new Worker("task2.js");
+        myWorker.onmessage = function (oEvent) {
+            console.log("test\n");
+        };
+
+        myWorker.postMessage("done");
+
+        myWorker2.onmessage = function (oEvent) {
+            console.log("test\n");
+        };
+
+        myWorker2.postMessage("done2");
+    </script> 
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>lab1sekw2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        const start = new Date().getTime();
+        const x = 5;
+        let result = 1
+
+        for (let index = 0; index < x; index++) {
+            result *= x-index;   
+            console.log(x);
+            console.log(index);
+            console.log(
+                result
+            );       
+        }
+
+        console.log(`sekw1 ${result}`);
+
+        const y = 7;
+        let result2 = 1
+
+        for (let index = 0; index < y; index++) {
+            result2 *= y-index;   
+            console.log(y);
+            console.log(index);
+            console.log(
+                result2
+            );
+        }
+
+        console.log(`sekw2 ${result2}`);
+        const end = new Date().getTime();
+        console.log(`sekw finished in ${end-start} ms`);
+        
+    </script>
+</body>
+</html>
