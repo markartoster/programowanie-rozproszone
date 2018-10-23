@@ -1,5 +1,5 @@
 const start = new Date().getTime();
-const x = 5;
+const x = 20;
 let result = 1
 
 for (let index = 0; index < x; index++) {

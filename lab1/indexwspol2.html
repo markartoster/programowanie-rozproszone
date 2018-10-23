@@ -10,15 +10,21 @@
     <script>
         const myWorker = new Worker("task1.js");
         const myWorker2 = new Worker("task2.js");
-        myWorker.onmessage = function (oEvent) {
-            console.log("test\n");
-        };
+        
 
-        myWorker.postMessage("done");
+        myWorker.addEventListener("message", function (oEvent) {
+            let test = document.createElement('p')
+            test.innerHTML = 'test'
+            console.log('hello');
+        }, false);
 
-        myWorker2.onmessage = function (oEvent) {
-            console.log("test\n");
-        };
+        window.addEventListener('DOMContentLoaded', myWorker.postMessage("done"), false)
+        
+         myWorker2.addEventListener("message", function (oEvent) {
+            let test = document.createElement('p')
+            test.innerHTML = 'test'
+            console.log('hello');
+        }, false);
 
         myWorker2.postMessage("done2");
     </script> 
