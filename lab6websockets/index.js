@@ -11,7 +11,7 @@ const server = app.listen(4000, () => {
 //Pliki Statyczne
 app.use(express.static('public'))
 
-//Setup Socket
+//Setup Socket -- odpalamy: nodemon index
 const io = socket(server);
 
 //Listen for connections - socket is instance of that one parcicular socket
