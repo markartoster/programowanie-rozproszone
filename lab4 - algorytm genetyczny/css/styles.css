@@ -1,0 +1,39 @@
+table,
+tr,
+td {
+    border: 1px solid #959595;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 40px;
+}
+
+td {
+    width: 40px;
+}
+
+.floor {
+    background-color: #fff;
+}
+
+.wall {
+    background-color: #000;
+}
+
+.start {
+    background-color: #008000;
+}
+
+.exit {
+    background-color: #8b0000;
+}
+
+.player {
+    background-color: #3399ff;
+    border-radius: 20px;
+}
