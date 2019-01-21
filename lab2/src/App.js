@@ -6,6 +6,8 @@ class App extends Component {
     try {
       const res = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=a9a044fab959ff29628041fff2fcac7b&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1');
       const movies = await res.json();
+      console.log(movies);
+      
       this.setState({
         movies: movies.results,
       });
@@ -22,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state.movies.map(movie => <h2>{movie.title}</h2>)
+          this.state.movies.map(movie => <h2 key={movie.title} >{movie.title}</h2>)
         }
       </div>
     );
